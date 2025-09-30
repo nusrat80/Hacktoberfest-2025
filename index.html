@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <div class="logo">🧩</div>
+                <h1>The Code Snippet Library</h1>
+                <p class="subtitle">A community-curated collection of useful code snippets for all your projects.</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="filters">
+                <div class="search-container">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="search-input" placeholder="Search snippets by title, tag, or description...">
+                </div>
+                <div id="language-filters" class="language-filters">
+                </div>
+            </div>
+
+            <div id="snippets-grid">
+            </div>
+            <p id="no-results" class="no-results-message">No snippets found.</p>
+        </main>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Code Snippet</h3>
+                <button id="modal-close" class="modal-close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <pre><code id="modal-code" class="language-js"></code></pre>
+            </div>
+            <div class="modal-footer">
+                <button id="copy-code-btn" class="copy-button">
+                    <i class="ri-clipboard-line"></i>
+                    <span>Copy Code</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

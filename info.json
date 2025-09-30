@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Debounce Function",
+    "description": "A function that delays invoking a callback until after a certain amount of time has passed without it being called.",
+    "author": "YourGitHubUsername",
+    "language": "JavaScript",
+    "tags": ["functions", "performance", "events"],
+    "code": "function debounce(func, timeout = 300){\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => { func.apply(this, args); }, timeout);\n  };\n}"
+  },
+  {
+    "title": "Center a Div",
+    "description": "The simplest way to center an element horizontally and vertically inside its parent container using modern CSS.",
+    "author": "AnotherUser",
+    "language": "CSS",
+    "tags": ["layout", "centering", "grid"],
+    "code": ".parent-container {\n  display: grid;\n  place-items: center;\n}"
+  }
+]
