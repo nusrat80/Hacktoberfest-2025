@@ -14,5 +14,13 @@
     "language": "CSS",
     "tags": ["layout", "centering", "grid"],
     "code": ".parent-container {\n  display: grid;\n  place-items: center;\n}"
+  },
+  {
+    "title": "Throttle Function",
+    "description": "A function that ensures a callback is executed at most once per specified time period, preventing rapid-fire execution.",
+    "author": "Aarzoo Islam",
+    "language": "JavaScript",
+    "tags": ["functions", "performance", "events", "rate-limiting"],
+    "code": "function throttle(func, limit) {\n  let inThrottle;\n  return function (...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => (inThrottle = false), limit);\n    }\n  };\n}"
   }
 ]
