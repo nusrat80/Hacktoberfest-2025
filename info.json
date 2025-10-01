@@ -30,5 +30,19 @@
     "language": "TypeScript",
     "tags": ["functions", "performance", "events", "typescript"],
     "code": "export function debounce<T extends (...args: any[]) => void>(\n  func: T,\n  timeout = 300\n): (...args: Parameters<T>) => void {\n  let timer: ReturnType<typeof setTimeout> | null;\n\n  return (...args: Parameters<T>): void => {\n    if (timer) clearTimeout(timer);\n    timer = setTimeout(() => {\n      func.apply(null, args);\n    }, timeout);\n  };\n}"
+  },
+  {
+    "title": "Throttle Function",
+    "description": "A TypeScript function that ensures a callback is executed at most once per specified time period, preventing rapid-fire execution.",
+    "author": "Aarzoo Islam",
+    "language": "TypeScript",
+    "tags": [
+      "functions",
+      "performance",
+      "events",
+      "rate-limiting",
+      "typescript"
+    ],
+    "code": "export function throttle<T extends (...args: any[]) => void>(\n  func: T,\n  limit: number\n): (...args: Parameters<T>) => void {\n  let inThrottle = false;\n\n  return (...args: Parameters<T>): void => {\n    if (!inThrottle) {\n      func.apply(null, args);\n      inThrottle = true;\n      setTimeout(() => {\n        inThrottle = false;\n      }, limit);\n    }\n  };\n}"
   }
 ]
