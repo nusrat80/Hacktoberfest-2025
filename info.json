@@ -22,5 +22,13 @@
     "language": "JavaScript",
     "tags": ["functions", "performance", "events", "rate-limiting"],
     "code": "function throttle(func, limit) {\n  let inThrottle;\n  return function (...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => (inThrottle = false), limit);\n    }\n  };\n}"
+  },
+  {
+    "title": "Debounce Function",
+    "description": "A TypeScript function that delays invoking a callback until after a specified time has passed without it being called.",
+    "author": "YourGitHubUsername",
+    "language": "TypeScript",
+    "tags": ["functions", "performance", "events", "typescript"],
+    "code": "export function debounce<T extends (...args: any[]) => void>(\n  func: T,\n  timeout = 300\n): (...args: Parameters<T>) => void {\n  let timer: ReturnType<typeof setTimeout> | null;\n\n  return (...args: Parameters<T>): void => {\n    if (timer) clearTimeout(timer);\n    timer = setTimeout(() => {\n      func.apply(null, args);\n    }, timeout);\n  };\n}"
   }
 ]
