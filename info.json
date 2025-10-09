@@ -44,5 +44,13 @@
       "typescript"
     ],
     "code": "export function throttle<T extends (...args: any[]) => void>(\n  func: T,\n  limit: number\n): (...args: Parameters<T>) => void {\n  let inThrottle = false;\n\n  return (...args: Parameters<T>): void => {\n    if (!inThrottle) {\n      func.apply(null, args);\n      inThrottle = true;\n      setTimeout(() => {\n        inThrottle = false;\n      }, limit);\n    }\n  };\n}"
-  }
+  },
+  {
+  "title": "Box Shadow",
+  "description": "Easily add a subtle shadow to any element to make it stand out and give depth to your design.",
+  "author": "Bhavya0420",
+  "language": "CSS",
+  "tags": ["design", "ui", "shadow", "effects"],
+  "code": "box-shadow {\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n}"
+}
 ]
