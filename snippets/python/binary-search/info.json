@@ -1,0 +1,7 @@
+{
+  "title": "Binary Search Algorithm",
+  "description": "Efficient binary search implementation for sorted arrays. Performs search in O(log n) time complexity, making it ideal for large datasets. Includes detailed documentation, time/space complexity analysis, and practical examples demonstrating both successful and unsuccessful search cases.",
+  "author": "arinmandal",
+  "language": "python",
+  "tags": ["algorithm", "search", "binary-search", "data-structures", "sorting", "arrays", "optimization", "interview-prep"]
+}
